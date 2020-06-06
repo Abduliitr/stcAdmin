@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardTitle, Row, BreadcrumbItem, Breadcrumb, Button, CardText } from 'reactstrap'
-
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
     
@@ -59,9 +59,14 @@ class Home extends Component {
                     <Row>
                         <Breadcrumb className="col-12 col-md-12">
                             <BreadcrumbItem active>Admin Home</BreadcrumbItem>
+
+                            {/* This will be only visible to gensec */}
+                            <Link to="/create/user" className="ml-auto">
+                                <Button color="outline-primary">Create User</Button>   
+                            </Link>
+
                         </Breadcrumb>
                         <div className="col-12 col-md-12">
-                            {/* <h3>Create Notice</h3> */}
                             <hr />
                         </div>
                     </Row>
@@ -80,10 +85,14 @@ class Home extends Component {
                                             </div>
                                             <div className="row">
                                                 <div className="col-6 col-sm-6">
-                                                    <Button className="btn-block" href={item.link1[1]}> {item.link1[0]} </Button>
+                                                    <Link to={item.link1[1]}>
+                                                        <Button className="btn-block"> {item.link1[0]} </Button>
+                                                    </Link>
                                                 </div>
                                                 <div className="col-6 col-sm-6">
-                                                    <Button className="btn-block" href={item.link2[1]}> {item.link2[0]} </Button>
+                                                    <Link to={item.link2[1]}>
+                                                        <Button className="btn-block"> {item.link2[0]} </Button>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </CardBody>

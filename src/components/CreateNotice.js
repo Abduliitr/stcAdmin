@@ -20,6 +20,9 @@ class CreateNotice extends Component {
                         <Breadcrumb className="col-12 col-md-9">
                             <BreadcrumbItem><Link to="/home">Admin Home</Link></BreadcrumbItem>
                             <BreadcrumbItem active>Create Notice</BreadcrumbItem>
+                            <Link to="/home" className="ml-auto">
+                                <Button color="outline-primary">Back</Button>   
+                            </Link>
                         </Breadcrumb>
                         <div className="col-12 col-md-9">
                             <h3>Create Notice</h3>
