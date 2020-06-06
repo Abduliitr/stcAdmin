@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText } from 'reactstrap'
+import { Card, CardBody, CardTitle, Row, BreadcrumbItem, Breadcrumb, Button, CardText } from 'reactstrap'
 
 
 class Home extends Component {
@@ -56,10 +56,19 @@ class Home extends Component {
         return (
             <div className="home">
                 <div className="container">
+                    <Row>
+                        <Breadcrumb className="col-12 col-md-12">
+                            <BreadcrumbItem active>Admin Home</BreadcrumbItem>
+                        </Breadcrumb>
+                        <div className="col-12 col-md-12">
+                            {/* <h3>Create Notice</h3> */}
+                            <hr />
+                        </div>
+                    </Row>
                     <div className="row">
                         {this.state.cardItems.map((item)=>{
                             return (
-                                <div key={item.id} className="col-12 col-md-4 col-lg-4" style={{paddingBlock:"20px"}}>
+                                <div key={item.id} className="col-12 col-sm-6 col-md-6 col-lg-4" style={{paddingBlock:"20px"}}>
                                     <Card>
                                         <CardBody>
                                             <CardTitle><h5> {item.title} </h5></CardTitle>

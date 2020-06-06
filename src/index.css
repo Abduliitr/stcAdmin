@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
+section{
+  padding-top: 100px;
+}
 /* Home component */
 .home{
   padding-top: 100px;
